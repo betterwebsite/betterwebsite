@@ -3,7 +3,7 @@
 <!-- ============================================ -->
 
 <header id="cs-navigation">
-    <div class="cs-container">
+    <div class="cs-container" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
         <!--Nav Logo-->
         <!--Logo is turned white in the css with a filter on dark mode-->
         <a href="/" class="cs-logo" aria-label="back to home">
@@ -23,16 +23,16 @@
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="/" class="cs-li-link cs-active">
+                        <a href="/" class="cs-li-link {{ 'cs-active' if '' == page.fileSlug }}">
                             Home
                         </a>
                     </li>
                     <li class="cs-li cs-dropdown" tabindex="0">
-                        <span class="cs-li-link">
+                        <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
                             About Us
-                        </span>
+                        </a>
                     </li>
-                    <li class="cs-li cs-dropdown" tabindex="0">
+                    <!-- <li class="cs-li cs-dropdown" tabindex="0">
                         <span class="cs-li-link">
                             Services
                             <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
@@ -55,9 +55,9 @@
                         <a href="/blog" class="cs-li-link">
                             Blog
                         </a>
-                    </li>
+                    </li> -->
                     <li class="cs-li">
-                        <a href="/contact" class="cs-li-link">
+                        <a href="/contact" class="cs-li-link {{ 'cs-active' if 'contact' == page.fileSlug }}">
                             Contact
                         </a>
                     </li> 
@@ -67,9 +67,13 @@
         <div class="cs-contact-group">
             <a href="tel:918-260-5366" class="cs-phone">
                 <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
-                918-260-5366
+                (918) 260-5366 - David
             </a>
-            <div class="cs-social">
+            <a href="tel:405-761-8429" class="cs-phone">
+                <img class="cs-phone-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">
+                (405) 761-8429 -Jordan
+            </a>
+            <!-- <div class="cs-social">
                 <a href="https://www.facebook.com/d.fletchr" class="cs-social-link">
                     <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
                 </a>
@@ -82,7 +86,7 @@
                 <a href="https://www.linkedin.com/in/david-fletcher-2b38211b3/" class="cs-social-link">
                     <img class="cs-social-icon" src="/assets/svgs/linkedin.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
                 </a>
-            </div>
+            </div> -->
         </div>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
         <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">

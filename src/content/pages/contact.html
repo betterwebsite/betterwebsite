@@ -1,5 +1,5 @@
 ---
-title: 'Contact | Code Stitch Web Designs'
+title: 'Contact | Better Website'
 description: 'Meta description for the page'
 preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'contact/'
@@ -24,9 +24,9 @@ eleventyNavigation:
     <section id="int-hero">
         <h1 id="home-h">Contact Us</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/website.png">
+            <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/website.png">
+            <img aria-hidden="true" decoding="async" src="https://ik.imagekit.io/betterwebsite/BetterWebsite/website.png" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
         </picture>
     </section>
 
@@ -40,9 +40,9 @@ eleventyNavigation:
                 <div class="cs-content">
                     <span class="cs-topper">Contact</span>
                     <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
+                    <!-- <p class="cs-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
+                    </p> -->
                 </div>
                 <label>
                     Name
@@ -73,17 +73,17 @@ eleventyNavigation:
                 <!--Phone-->
                 <span class="cs-header">Phone</span>
                 <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
+                <a class="cs-link" href="tel:405-761-8429">(405) 761-8429</a>
                 <!--Address-->
                 <span class="cs-header">Address</span>
                 <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br/>
-                    {{client.address.lineTwo}},
-                    <br/>
                     <span class="cs-block">
-                        {{client.address.city}}
-                        {{client.address.state}}
-                        {{client.address.zip}}
+                        TULSA OK
+                    </span>
+                </a>
+                <a class="cs-link">
+                    <span class="cs-block">
+                        NORMAN  OK
                     </span>
                 </a>
 
