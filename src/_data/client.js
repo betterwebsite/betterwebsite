@@ -1,6 +1,6 @@
 module.exports = {
     "name": "Better Website",
-    "email": "normanwebdesigners@gmail.com",
+    "email": "davidfletcher@betterwebsite.ai",
     "phoneForTel": "859-462-8431",
     "phoneFormatted": "(859) 462-8431",
     "address": {
