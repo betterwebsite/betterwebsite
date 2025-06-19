@@ -24,9 +24,9 @@ eleventyNavigation:
     <section id="int-hero">
         <h1 id="home-h">Contact Us</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/website.png">
-            <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/website.png">
-            <img aria-hidden="true" decoding="async" src="https://ik.imagekit.io/betterwebsite/BetterWebsite/website.png" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/contact.jpg' | webp %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/contact.jpg' | webp %}">
+            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/contact.jpg' | webp %}" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
         </picture>
     </section>
 
@@ -70,10 +70,11 @@ eleventyNavigation:
                 <!--Email-->
                 <span class="cs-header">Email</span>
                 <a class="cs-link" href="mailto:davidfletcher@betterwebsite.ai">davidfletcher@betterwebsite.ai</a>
+                <a class="cs-link" href="mailto:jordanbabb@betterwebsite.ai">jordanbabb@betterwebsite.ai</a>
                 <!--Phone-->
                 <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:918-260-5366">(918) 260-5366</a>
-                <a class="cs-link" href="tel:405-761-8429">(405) 761-8429</a>
+                <a class="cs-link" href="tel:918-260-5366">D - (918) 260-5366</a>
+                <a class="cs-link" href="tel:405-761-8429">J - (405) 761-8429</a>
                 <!--Address-->
                 <span class="cs-header">Address</span>
                 <a class="cs-link" href="{{client.address.mapLink}}">
@@ -89,8 +90,8 @@ eleventyNavigation:
 
                 <!-- Background Image-->
                 <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/emailer.png">
-                    <img style="object-fit: contain;opacity: 0.65;" aria-hidden="true" decoding="async" src="/assets/images/emailer.png" alt="building" loading="lazy" width="2500" height="1667">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/partner.jpg' | webp %}">
+                    <img style="opacity: 0.65;" aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/partner.jpg' | webp %}" alt="building" loading="lazy" width="2500" height="1667">
                 </picture>
 
             </div>

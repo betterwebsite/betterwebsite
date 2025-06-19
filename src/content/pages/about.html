@@ -22,56 +22,149 @@ eleventyNavigation:
     <section id="int-hero">
         <h1 id="home-h">About Us</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/website.png">
-            <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/website.png">
-            <img aria-hidden="true" decoding="async" src="https://ik.imagekit.io/betterwebsite/BetterWebsite/website.png" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/programmer.jpg' | webp %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/programmer.jpg' | webp %}">
+            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/programmer.jpg' | webp %}" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
         </picture>
 
     </section>
+
+
+
+
+
 <!-- ============================================ -->
-<!--                 Side by Side                 -->
+<!--                 Side By Side                 -->
 <!-- ============================================ -->
 
-<section id="sbs-1901">
+<section id="RPsbs-1208">
     <div class="cs-container">
-        <div class="cs-content">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--To make your own PNG cropped people, use https://www.remove.bg/ to remove the background of any image-->
+            <!--Main Image-->
             <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/jordan.webp">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/jordan.jpg">
-                    <img loading="lazy" decoding="async" src="https://ik.imagekit.io/betterwebsite/BetterWebsite/jordan.jpg" alt="person" width="305" height="407">
-                </picture>
-            <div class="cs-wrapper cs-wrapper2">
-                <span class="cs-topper">Co Founder</span>
-                <h2 class="cs-title">Jordan Babb</h2>
-                <p class="cs-text">
-                    I'm Jordan Babb. I love being outside, snowboarding, and reading. I studied Computer Science and have been working in website development for years. I love creating something out of nothing and making client vision come to life!
-                </p>
-                <a class="cs-button-solid" href="">Call Now</a>
-            </div>
-        </div>
-        <div class="cs-content">
-            <picture class="cs-picture cs-picture2" style="width: 17rem; margin: auto">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/david.webp">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/david.jpg">
-                <img loading="lazy" decoding="async" src="https://ik.imagekit.io/betterwebsite/BetterWebsite/david.jpg" alt="person" width="305" height="407">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/jordan.png' | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/jordan.png' | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/jordan.png' | webp %}" alt="accountant" width="522" height="793"  aria-hidden="true">
             </picture>
-            
-            <div class="cs-wrapper cs-wrapper1">
-                <span class="cs-topper">Co Founder</span>
-                <h2 class="cs-title">David Fletcher</h2>
-                <p class="cs-text">
-                    I'm David Fletcher, a local web desinger in Tulsa. After spending three years as a small business owner in real estate, I realized how expensive and inaccessible quality websites can be - often costing thousands upfront with no preview. Frustrated by this, we started our business to provide affordable, custome-coded websites for all businesses. My goal is to be your go-to web designer for the next 10+ years.
-                </p>
-                <a class="cs-button-solid" href="">Call Now</a>
+            <!--Small Image-->
+            <!-- <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/growth.svg" alt="icon" width="40" height="40" aria-hidden="true">
+                <span class="cs-box-header">Business Growth</span>
+                <ul class="cs-box-ul">
+                    <li class="cs-box-li">Global Industry</li>
+                    <li class="cs-box-li">Smart Solution</li>
+                    <li class="cs-box-li">Fast Process</li>
+                </ul>
             </div>
+            <div class="cs-stat">
+                <div class="cs-ring-wrapper">
+                    <span class="cs-number">90%</span>
+                    <svg class="cs-ring" style="--ratio: 0.90">
+                        <circle cx="50%" cy="50%" r="50%"/>
+                        <circle cx="50%" cy="50%" r="50%"/>
+                    </svg>
+                </div>
+                <span class="cs-header">Project Success</span>
+                <span class="cs-desc">by assisted startup</span>
+            </div>
+            <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/swirl.svg" alt="graphic" width="950" height="950" aria-hidden="true"> -->
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">Co Founder</span>
+            <h2 class="cs-title">Jordan Babb</h2>
+            <h3 class="cs-h3">I love being outside, snowboarding, and reading. I studied Computer Science and have been working in website development for years. I love creating something out of nothing and making client vision come to life!</h3>
+            <!-- <p class="cs-text">
+                In the new era of technology we look in the future with certainty and pride for our company and business. consider all the drivers of change gives you the blocks & pride for our components you need to change to create a truly professional website In the new era.
+            </p> -->
+            <div class="cs-content-flair">
+                <ul class="cs-ul">
+                    <li class="cs-li">Website Developer</li>
+                    <li class="cs-li">Full Stack Development</li>
+                    <li class="cs-li">Python</li>
+                    <li class="cs-li">Javascript</li>
+                    <li class="cs-li">PostgreSQL</li>
+                </ul>
+                <!-- <a href="" class="cs-video-link">
+                    <img class="cs-video-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/video-bg.jpg" alt="people" width="280" height="160" aria-hidden="true">
+                    <picture class="cs-wrapper">
+                        <img class="cs-link-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/play-sharp2.svg" alt="graphic" width="24" height="24" aria-hidden="true">
+                    </picture>
+                </a> -->
+            </div>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="/contact">Contact</a>
         </div>
     </div>
 </section>
-                                
+
+<!-- ============================================ -->
+<!--              Side By Side Reverse            -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-1208">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--To make your own PNG cropped people, use https://www.remove.bg/ to remove the background of any image-->
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/david.png' | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/david.png' | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/david.png' | webp %}" alt="accountant" width="522" height="793"  aria-hidden="true">
+            </picture>
+            <!--Small Image-->
+            <!-- <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/growth.svg" alt="icon" width="40" height="40" aria-hidden="true">
+                <span class="cs-box-header">Business Growth</span>
+                <ul class="cs-box-ul">
+                    <li class="cs-box-li">Global Industry</li>
+                    <li class="cs-box-li">Smart Solution</li>
+                    <li class="cs-box-li">Fast Process</li>
+                </ul>
+            </div>
+            <div class="cs-stat">
+                <div class="cs-ring-wrapper">
+                    <span class="cs-number">90%</span>
+                    <svg class="cs-ring" style="--ratio: 0.90">
+                        <circle cx="50%" cy="50%" r="50%"/>
+                        <circle cx="50%" cy="50%" r="50%"/>
+                    </svg>
+                </div>
+                <span class="cs-header">Project Success</span>
+                <span class="cs-desc">by assisted startup</span>
+            </div>
+            <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/swirl.svg" alt="graphic" width="950" height="950" aria-hidden="true"> -->
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">Co Founder</span>
+            <h2 class="cs-title">David Fletcher</h2>
+            <h3 class="cs-h3">I'm David Fletcher, a local web desinger in Tulsa. After spending three years as a small business owner in real estate, I realized how expensive and inaccessible quality websites can be - often costing thousands upfront with no preview. Frustrated by this, we started our business to provide affordable, custome-coded websites for all businesses. My goal is to be your go-to web designer for the next 10+ years.</h3>
+            <!-- <p class="cs-text">
+                In the new era of technology we look in the future with certainty and pride for our company and business. consider all the drivers of change gives you the blocks & pride for our components you need to change to create a truly professional website In the new era.
+            </p> -->
+            <div class="cs-content-flair">
+                <ul class="cs-ul">
+                    <li class="cs-li">Website Developer</li>
+                    <li class="cs-li">Designer</li>
+                    <li class="cs-li">Project Managment</li>
+                    <li class="cs-li">Visionary</li>
+                    <li class="cs-li">Lead Generation</li>
+                </ul>
+                <!-- <a href="" class="cs-video-link">
+                    <img class="cs-video-bg" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/video-bg.jpg" alt="people" width="280" height="160" aria-hidden="true">
+                    <picture class="cs-wrapper">
+                        <img class="cs-link-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/play-sharp2.svg" alt="graphic" width="24" height="24" aria-hidden="true">
+                    </picture>
+                </a> -->
+            </div>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="/contact">Contact</a>
+        </div>
+    </div>
+</section>
+                                             
 
     {% include 'components/cta.html' %}
 
