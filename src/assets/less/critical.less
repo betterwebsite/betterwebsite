@@ -560,7 +560,6 @@
                 object-fit: cover;
                 border-radius: (40/16rem);
                 position: absolute;
-                left: -16%;
             }
             .floater {
       position: absolute;
@@ -584,13 +583,15 @@
     .floater--laptop {
       z-index: 1;
       top: 0;
-      width: 90%;
+      width: 113%;
+      left: 0%;
       animation-duration: 12s;
       animation-delay: 0s;
     }
 
     // iPhone floats a bit faster and offset
     .floater--iphone {
+      display: none;
       z-index: 2;
       top: 0%;
       left: 65%;
@@ -692,9 +693,12 @@
         }
         .cs-picture {
       .floater--laptop {
+        width: 100%;
         top: 15%;
+        left: -16%;
       }
       .floater--iphone {
+        display: block;
         top: -15%;
         left: 66%;
         width: 248px;
@@ -708,9 +712,12 @@
     #hero-1946 {
         .cs-picture {
       .floater--laptop {
+        width: 100%;
         top: 12%;
+        left: -16%;
       }
       .floater--iphone {
+        display: block;
         top: 0%;
         left: 72%;
         width: 265px;

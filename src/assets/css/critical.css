@@ -505,7 +505,6 @@
     object-fit: cover;
     border-radius: 2.5rem;
     position: absolute;
-    left: -16%;
   }
   #hero-1946 .cs-picture .floater {
     position: absolute;
@@ -529,11 +528,13 @@
   #hero-1946 .cs-picture .floater--laptop {
     z-index: 1;
     top: 0;
-    width: 90%;
+    width: 113%;
+    left: 0%;
     animation-duration: 12s;
     animation-delay: 0s;
   }
   #hero-1946 .cs-picture .floater--iphone {
+    display: none;
     z-index: 2;
     top: 0%;
     left: 65%;
@@ -620,9 +621,12 @@
     grid-column: span 6;
   }
   #hero-1946 .cs-picture .floater--laptop {
+    width: 100%;
     top: 15%;
+    left: -16%;
   }
   #hero-1946 .cs-picture .floater--iphone {
+    display: block;
     top: -15%;
     left: 66%;
     width: 248px;
@@ -631,9 +635,12 @@
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #hero-1946 .cs-picture .floater--laptop {
+    width: 100%;
     top: 12%;
+    left: -16%;
   }
   #hero-1946 .cs-picture .floater--iphone {
+    display: block;
     top: 0%;
     left: 72%;
     width: 265px;

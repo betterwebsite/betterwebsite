@@ -238,7 +238,7 @@ eleventyNavigation:
                     <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/jordan.png' | webp %}">
                     <!--Tablet and above Image-->
                     <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/jordan.png' | webp %}">
-                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/jordan.png' | webp %}" alt="person" width="305" height="407">
+                    <img style="object-fit: contain;" loading="lazy" decoding="async" src="{% getUrl '/assets/images/jordan.png' | webp %}" alt="person" width="305" height="407">
                 </picture>
                 <div class="cs-info">
                     <span class="cs-name">Jordan Babb</span>
@@ -251,7 +251,7 @@ eleventyNavigation:
                     <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/david.png' | webp %}">
                     <!--Tablet and above Image-->
                     <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/david.png' | webp %}">
-                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/david.png' | webp %}" alt="person" width="305" height="407">
+                    <img style="object-fit: contain;" loading="lazy" decoding="async" src="{% getUrl '/assets/images/david.png' | webp %}" alt="person" width="305" height="407">
                 </picture>
                 <div class="cs-info">
                     <span class="cs-name">David Fletcher</span>
@@ -558,7 +558,6 @@ eleventyNavigation:
 
 <style>
     .custom-shape-divider-bottom-1745360831 {
-    margin-top: 5rem;
     background-color: rgba(0, 0, 0, 0);
     position: relative;
     bottom: 0;
