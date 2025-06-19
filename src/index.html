@@ -76,36 +76,99 @@ eleventyNavigation:
 
 
 
-
-
-
-
 <!-- ============================================ -->
-<!--                    Hero                      -->
+<!--                     Hero                     -->
 <!-- ============================================ -->
 
-<section id="hero-1350">
+
+<section id="hero-1946">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper" style="color: #194fff;">Welcome To Better Website</span>
-            <h1 class="cs-title" style="color: black;">Small Business Web Design & Development</h1>
-            <p class="cs-text" style="color: black;">
-                No page builders or WordPress - We offer superior 100% hand-coded websites.
-            </p>
-            <a href="/contact" class="cs-button-solid" style="color: black;background-color: #7092ff;">Get Started</a>
+            <h2 class="cs-title" style="margin: auto;">Your Website <br> Built <span id="typed-wrapper" style="color: #3e6bff;">
+    <span id="typed-text"></span><span class="cursor" style="color: #3e6bff">|</span>
+  </span>
+</h2>
+            <div class="cs-flex">
+                <p class="cs-text"></p>
+                <a href="" class="cs-button-solid"></a>
+            </div>
         </div>
+        <picture class="cs-picture" >
+            <!-- <img class="floater floater--laptop" decoding="async" src="/assets/images/laptop.jpg" alt="construction site" width="1280" height="510" > -->
+            <img class="floater floater--iphone" decoding="async" src="{% getUrl '/assets/images/iphone-flipped.png' | resize({ height: 654, width: 265, position: 'top' }) | webp %}" alt="construction site" width="1280" height="510" >
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/0970.jpg' | webp %}">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/0970.jpg' | webp %}">
+            <img class="floater floater--laptop" decoding="async" src="{% getUrl '/assets/images/0970.jpg' | webp %}" alt="construction site" width="1280" height="510" >
+        </picture>
     </div>
-    <!--Bubble Groups-->
-    <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>
-    <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div>
-    <!-- Background Image, background image added in the css at 1600px for parallax effect -->
-    <!-- <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract-m.jpg">
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg">
-        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg" alt="abstract background" width="2250" height="1500" aria-hidden="true">
-    </picture> -->
 </section>
-                    
+                                
+
+
+<style>
+  .cursor {
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    animation: blink 0.7s steps(1) infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  #typed-wrapper {
+    display: inline-block;
+    min-width: 150px; /* adjust based on longest word */
+    text-align: left;
+  }
+
+  #typed-text {
+    display: inline-block;
+    white-space: nowrap;
+  }
+</style>
+
+<script>
+  const words = [
+    "Better",
+    "Faster",
+    "Cheaper"
+  ];
+
+  const typedText = document.getElementById("typed-text");
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    const currentWord = words[wordIndex];
+    const visibleText = currentWord.substring(0, charIndex);
+    typedText.textContent = visibleText;
+
+    if (!isDeleting && charIndex < currentWord.length) {
+      charIndex++;
+      setTimeout(typeLoop, 120);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(typeLoop, 60);
+    } else {
+      if (!isDeleting) {
+        isDeleting = true;
+        setTimeout(typeLoop, 1200);
+      } else {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeLoop, 300);
+      }
+    }
+  }
+
+  typeLoop();
+</script>
+
+            
 
 
 
@@ -153,6 +216,7 @@ eleventyNavigation:
 }
 </style>
             
+
 <!-- ============================================ -->
 <!--                Meet The Team                 -->
 <!-- ============================================ -->
@@ -161,19 +225,20 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-content">
             <div class="cs-flex">
-                <span class="cs-topper">Our Expert Team</span>
-                <h2 class="cs-title">Meet The Team!</h2>
+                <!-- <span class="cs-topper">Our Expert Team</span> -->
+                <h2 class="cs-title">Hello, We're Better Website</h2>
+                <p class="cs-text">We are a team of web developers who specialize in building custom websites that are fast, responsive, and SEO-optimized. Our goal is to make the process of getting a quality website as easy and hassle-free as possible. Whether you need a simple landing page or a complex e-commerce site, we can help you bring your vision to life.</p>
             </div>
-            <a href="/about" class="cs-button-solid">About Us</a>
+            <a href="/about" class="cs-button-solid" style="margin-top: 4px;">About Us</a>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/jordan.webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/jordan.png' | webp %}">
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/jordan.jpg">
-                    <img loading="lazy" decoding="async" src="https://ik.imagekit.io/betterwebsite/BetterWebsite/jordan.jpg" alt="person" width="305" height="407">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/jordan.png' | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/jordan.png' | webp %}" alt="person" width="305" height="407">
                 </picture>
                 <div class="cs-info">
                     <span class="cs-name">Jordan Babb</span>
@@ -183,10 +248,10 @@ eleventyNavigation:
             <li class="cs-item">
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/david.webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/david.png' | webp %}">
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/david.jpg">
-                    <img loading="lazy" decoding="async" src="https://ik.imagekit.io/betterwebsite/BetterWebsite/david.jpg" alt="person" width="305" height="407">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/david.png' | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/david.png' | webp %}" alt="person" width="305" height="407">
                 </picture>
                 <div class="cs-info">
                     <span class="cs-name">David Fletcher</span>
@@ -195,13 +260,6 @@ eleventyNavigation:
             </li>
         </ul>
     </div>
-    <picture class="cs-background-special">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/background.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/betterwebsite/BetterWebsite/background.jpg">
-        <img loading="lazy" decoding="async" src="https://ik.imagekit.io/betterwebsite/BetterWebsite/background.jpg" alt="stone texture" width="630" height="400">
-    </picture>
 </section>
                                 
 

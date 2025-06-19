@@ -15,6 +15,7 @@ const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
 
 
+
 module.exports = function (eleventyConfig) {
     /**=====================================================================
           EXTENSIONS - Recognising non-default languages as templates 
@@ -37,7 +38,6 @@ module.exports = function (eleventyConfig) {
     /**=====================================================================
                                 END EXTENSIONS
     =======================================================================*/
-
 
     /**=====================================================================
                   PLUGINS - Adds additional eleventy functionality 
