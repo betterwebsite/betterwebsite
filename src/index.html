@@ -1,7 +1,7 @@
 ---
 title: 'Better Website | Home'
 description: 'BetterWebsite.ai delivers AI-powered web design that’s fast, responsive, and SEO-optimized. Get a stunning site tailored to your business—launch online today.'
-preloadImg: ''
+preloadImg: '/assets/images/0970.jpg'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -97,8 +97,8 @@ eleventyNavigation:
             <!-- <img class="floater floater--laptop" decoding="async" src="/assets/images/laptop.jpg" alt="construction site" width="1280" height="510" > -->
             <img class="floater floater--iphone" decoding="async" src="{% getUrl '/assets/images/iphone-flipped.png' | resize({ height: 654, width: 265, position: 'top' }) | webp %}" alt="construction site" width="1280" height="510" >
             <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/0970.jpg' | webp %}">
-            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/0970.jpg' | webp %}">
-            <img class="floater floater--laptop" decoding="async" src="{% getUrl '/assets/images/0970.jpg' | webp %}" alt="construction site" width="1280" height="510" >
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/0970.jpg'  | resize({ height: 600, width: 700 }) | webp %}">
+            <img class="floater floater--laptop" decoding="async" src="{% getUrl '/assets/images/0970.jpg' | webp %}" alt="laptop mockup" width="1280" height="510" >
         </picture>
     </div>
 </section>
@@ -235,9 +235,9 @@ eleventyNavigation:
             <li class="cs-item">
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/jordan.png' | webp %}">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/jordan.png' | resize({ height: 555, width: 444 }) | webp %}">
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/jordan.png' | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/jordan.png' | resize({ height: 555, width: 444 }) | webp %}">
                     <img style="object-fit: contain;" loading="lazy" decoding="async" src="{% getUrl '/assets/images/jordan.png' | webp %}" alt="person" width="305" height="407">
                 </picture>
                 <div class="cs-info">
@@ -248,9 +248,9 @@ eleventyNavigation:
             <li class="cs-item">
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/david.png' | webp %}">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/david.png' | resize({ height: 555, width: 444 }) | webp %}">
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/david.png' | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/david.png' | resize({ height: 555, width: 444 }) | webp %}">
                     <img style="object-fit: contain;" loading="lazy" decoding="async" src="{% getUrl '/assets/images/david.png' | webp %}" alt="person" width="305" height="407">
                 </picture>
                 <div class="cs-info">
@@ -528,9 +528,9 @@ eleventyNavigation:
             
             <li class="cs-item">
                 <a href="https://expertcustomstulsa.com/" class="cs-link" target="_blank">
-                    <h3 class="cs-h3">Rons Cycle Land</h3>
+                    <h3 class="cs-h3">Expert Customs</h3>
                     <p class="cs-item-text">
-                        Bike and Body shop in Tulsa, OK
+                        Body shop in Tulsa, OK
                     </p>
                 </a>
                 <picture class="cs-item-background">
