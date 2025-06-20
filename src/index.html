@@ -1,7 +1,7 @@
 ---
 title: 'Better Website | Home'
 description: 'BetterWebsite.ai delivers AI-powered web design that’s fast, responsive, and SEO-optimized. Get a stunning site tailored to your business—launch online today.'
-preloadImg: '/assets/images/0970.jpg'
+preloadImg: ''
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -12,6 +12,7 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    <link rel="preload" as="image" href="{% getUrl '/assets/images/0970.jpg' | webp %}"/>
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
@@ -88,10 +89,6 @@ eleventyNavigation:
     <span id="typed-text"></span><span class="cursor" style="color: #3e6bff">|</span>
   </span>
 </h2>
-            <div class="cs-flex">
-                <p class="cs-text"></p>
-                <a href="" class="cs-button-solid"></a>
-            </div>
         </div>
         <picture class="cs-picture" >
             <!-- <img class="floater floater--laptop" decoding="async" src="/assets/images/laptop.jpg" alt="construction site" width="1280" height="510" > -->
